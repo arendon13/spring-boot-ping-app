@@ -1,7 +1,5 @@
 package com.ping.service;
 
-import java.util.Date;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,8 +18,7 @@ public class PingingServiceImpl implements PingingService {
 
 	@Override
 	public void createPing() {
-		Date dt = dateService.getCurrentDate();
-		Ping ping = new Ping(dt);
+		Ping ping = new Ping(dateService.getCurDateTime());
 		pingRepo.save(ping);
 	}
 

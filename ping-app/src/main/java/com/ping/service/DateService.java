@@ -1,9 +1,9 @@
 package com.ping.service;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public interface DateService {
 	
-	public Date getCurrentDate();
+	public LocalDateTime getCurDateTime();
 
 }

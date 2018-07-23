@@ -1,6 +1,6 @@
 package com.ping.service;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Service;
 
@@ -8,9 +8,11 @@ import org.springframework.stereotype.Service;
 public class DateServiceImpl implements DateService {
 
 	@Override
-	public Date getCurrentDate() {
-		Date dt = new Date();
+	public LocalDateTime getCurDateTime() {
+		LocalDateTime dt = LocalDateTime.now();
 		return dt;
 	}
+	
+	
 
 }

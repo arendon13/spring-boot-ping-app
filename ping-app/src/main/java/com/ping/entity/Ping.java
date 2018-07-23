@@ -1,6 +1,6 @@
 package com.ping.entity;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,8 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="tbl_Pings")
@@ -21,12 +19,11 @@ public class Ping {
 	private int id;
 	
 	@Column(name="ping")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date ping;
+	private LocalDateTime ping;
 	
 	public Ping() {}
 	
-	public Ping(Date ping) {
+	public Ping(LocalDateTime ping) {
 		this.ping = ping;
 	}
 
@@ -38,11 +35,11 @@ public class Ping {
 		this.id = id;
 	}
 
-	public Date getPing() {
+	public LocalDateTime getPing() {
 		return ping;
 	}
 
-	public void setPing(Date ping) {
+	public void setPing(LocalDateTime ping) {
 		this.ping = ping;
 	}
 
