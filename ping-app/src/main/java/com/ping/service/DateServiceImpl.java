@@ -12,6 +12,18 @@ public class DateServiceImpl implements DateService {
 		LocalDateTime dt = LocalDateTime.now();
 		return dt;
 	}
+
+	@Override
+	public LocalDateTime getLastMinuteDateTime(LocalDateTime initDT) {
+		LocalDateTime lastMinute = initDT.minusMinutes(1);
+		return lastMinute;
+	}
+
+	@Override
+	public boolean isWithinLastMinute(LocalDateTime compareDate, LocalDateTime lastMinute) {
+		boolean isWithinLastMinute = (compareDate.isAfter(lastMinute)) ? true : false;
+		return isWithinLastMinute;
+	}
 	
 	
 

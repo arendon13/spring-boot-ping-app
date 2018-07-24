@@ -4,6 +4,10 @@ import java.time.LocalDateTime;
 
 public interface DateService {
 	
-	public LocalDateTime getCurDateTime();
+	LocalDateTime getCurDateTime();
+	
+	LocalDateTime getLastMinuteDateTime(LocalDateTime initDT);
+	
+	boolean isWithinLastMinute(LocalDateTime compareDate, LocalDateTime lastMinute);
 
 }
