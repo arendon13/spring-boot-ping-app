@@ -21,8 +21,7 @@ public class DateServiceImpl implements DateService {
 
 	@Override
 	public boolean isWithinLastMinute(LocalDateTime compareDate, LocalDateTime lastMinute) {
-		boolean isWithinLastMinute = (compareDate.isAfter(lastMinute)) ? true : false;
-		return isWithinLastMinute;
+		return (compareDate.isAfter(lastMinute)) ? true : false;
 	}
 	
 	
